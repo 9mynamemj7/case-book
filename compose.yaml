@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_PASSWORD=example
+    ports:
+      - "2908:2908"
+  app:
+    build:
+      context: .
+      target: final
